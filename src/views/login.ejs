@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= etiqueta %></title>
+
+    <%- include('partials/head') %>
+</head>
+
+<body class="login">
+
+    <%- include('partials/navigation') %>
+
+    <!-- Barra de navegación -->
+
+    <style>
+        .texto-justificado {
+            text-align: justify;
+        }
+
+        .divvdeseño-tarj {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .error {
+            color: #dc3545;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <!-- Contenedor principal -->
+    <main class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+
+        <!-- Tarjeta exterior -->
+        <div class="login-cardd p-5 bg-dark rounded shadow-lg">
+
+            <!-- Título de la vista -->
+            <section class="text-center mb-4">
+                <h1 class="h3 text-white">Iniciar sesión</h1>
+            </section>
+
+            <!-- Tarjeta del formulario -->
+            <div class="login-card p-4 bg-white rounded shadow-lg divvdeseño-tarj">
+
+                <form action="/login" method="POST">
+
+                    <!-- Mensaje de error -->
+                    <!-- Mensaje de error -->
+                 <% if (typeof mensaje !== 'undefined' && mensaje) { %>
+                   <div class="error">
+                    <%= mensaje %>
+                   </div>
+                <% } %>
+
+                    <!-- Campo de usuario -->
+                    <div class="mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="usuario"
+                            placeholder="Usuario"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <!-- Campo de contraseña -->
+                    <div class="mb-3">
+                        <input
+                            type="password"
+                            class="form-control"
+                            name="contrasena"
+                            placeholder="Contraseña"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex gap-2 justify-content-center flex-wrap">
+
+                        <a
+                            href="/registro"
+                            class="btn btn-outline-dark flex-file rounded-pill"
+                        >
+                            Crear usuario
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary flex-file rounded-pill"
+                        >
+                            Ingresar
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="btn btn-info flex-file rounded-pill"
+                        >
+                            Limpiar
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <!-- Enlaces de recuperación -->
+                <div class="links text-center mt-3 d-flex flex-column gap-1">
+
+                    <a
+                        href="/recuperar-password"
+                        class="text-decoration-none"
+                    >
+                        Restablecer contraseña
+                    </a>
+
+                    <a
+                        href="/recordar-usuario"
+                        class="text-decoration-none"
+                    >
+                        Recordar usuario
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <%- include('partials/footer') %>
+
+</body>
+</html>

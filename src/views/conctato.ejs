@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= etiqueta %> </title>
+    <%- include('partials/head') %>
+
+</head>
+<body>
+
+    <%- include('partials/navigation') %>
+
+        <!-- Creacion de formulario-->
+<!--
+        <div class="container vh-100 d-flex justify-content-center align-items-center">-->
+            <!--Crea una tarjeta de Boostraps para contener el formulario, bg-dark es para que el fondo 
+            del formulario sea de color oscuro... --><!--
+            <div class="card bg-dark text-white text-center">-->
+                <!-- se crea la cabecera de la tarjeta--><!--
+             <div class="card-header">
+                <h3 class="justify-content align-items-center">Escribenos</h3>
+                <div class="card-body text-star">
+                    <form>
+
+                        <div class="mb-3">
+                        <label for="nombre">Nombre "Requerido"</label>
+                        <input type="text" placeholder="Nombre Completo" class="form-control">
+
+                        </div>
+
+                        <div class="mb-3">
+                        <label for="nombre">Correo eletronico "Requerido"</label>
+                        <input type="text" placeholder="Correo eletronico" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                        <label for="nombre">Asunto "Requerido"</label>
+                        <input type="text" placeholder="Asunto" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                        <label for="nombre">Mensaje "Requerido"</label>
+                        <textarea name="Mensaje" rows="3" class="form-control" placeholder="Por favor escriba un Mensaje">
+                        </textarea>
+                        </div>
+
+                        <button type="submit">
+                            Enviar
+                        </button>
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                       
+                    </form>
+                </div>
+
+             </div>
+            </div>
+
+        </div>
+    -->
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+            <!--Crea una tarjeta de Boostraps para contener el formulario, bg-dark es para que el fondo 
+            del formulario sea de color oscuro... -->
+            <div class="card bg-dark text-white text-center">
+                <!-- se crea la cabecera de la tarjeta-->
+             <div class="card-header">
+                <h3 class="justify-content align-items-center">Escribenos</h3>
+              </div>
+                <div class="card-body text-star">
+
+            
+            
+       <form>
+
+    <!-- Nombre -->
+    <div class="mb-3 row">
+        <label for="nombre" class="col-sm-3 col-form-label">
+            Nombre completo
+        </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+        </div>
+    </div>
+
+
+    <!-- Correo -->
+    <div class="mb-3 row">
+        <label for="correo" class="col-sm-3 col-form-label">
+            Correo electrónico
+        </label>
+
+        <div class="col-sm-9">
+            <input type="email" class="form-control" id="correo" placeholder="Correo eletronico">
+        </div>
+    </div>
+
+
+    <!-- Teléfono -->
+    <div class="mb-3 row">
+        <label for="telefono" class="col-sm-3 col-form-label">
+            Teléfono
+        </label>
+
+        <div class="col-sm-9">
+            <input
+                type="tel"
+                class="form-control"
+                id="telefono"
+                placeholder="300 000 0000"
+            >
+        </div>
+    </div>
+
+
+    <!-- Tipo de servicio -->
+    <div class="mb-3 row">
+        <label for="servicio" class="col-sm-3 col-form-label">
+            Servicio
+        </label>
+
+        <div class="col-sm-9">
+            <select class="form-select" id="servicio">
+                <option selected>Selecciona un servicio</option>
+                <option>Desarrollo de software</option>
+                <option>Desarrollo web</option>
+                <option>Aplicaciones móviles</option>
+                <option>Automatización de procesos</option>
+                <option>Consultoría tecnológica</option>
+                <option>Otro</option>
+            </select>
+        </div>
+    </div>
+
+
+    <!-- Presupuesto -->
+    <div class="mb-3 row">
+        <label for="presupuesto" class="col-sm-3 col-form-label">
+            Presupuesto aproximado
+        </label>
+
+        <div class="col-sm-9">
+            <select class="form-select" id="presupuesto">
+                <option selected>Selecciona un rango</option>
+                <option>Menos de $1.000.000</option>
+                <option>$1.000.000 - $3.000.000</option>
+                <option>$3.000.000 - $5.000.000</option>
+                <option>Más de $5.000.000</option>
+            </select>
+        </div>
+    </div>
+
+
+    <!-- Descripción -->
+    <div class="mb-3 row">
+        <label for="mensaje" class="col-sm-3 col-form-label">
+            Cuéntanos tu proyecto
+        </label>
+
+        <div class="col-sm-9">
+            <textarea
+                class="form-control"
+                id="mensaje"
+                rows="5"
+                placeholder="Describe brevemente lo que necesitas..."
+            ></textarea>
+        </div>
+    </div>
+
+
+    <!-- Botón -->
+    <div class="mb-3 row">
+        <div class="offset-sm-3 col-sm-9">
+            <button type="submit" class="btn btn-primary">
+                Solicitar cotización
+            </button>
+            <button type="reset" class="btn btn-primary">
+                Limpiar
+            </button>
+        </div>
+    </div>
+ </form>
+                </div>
+            </div>
+    </div>
+<%- include('partials/footer') %>
+</body>
+</html>
